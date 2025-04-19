@@ -1,0 +1,26 @@
+# Ignore large model files
+*.h5
+*.pth
+*.pt
+*.pb
+
+# Ignore model folder
+models/
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+
+# Ignore virtual environment folder (if any)
+.env/
+venv/
+
+# Ignore system files
+.DS_Store
+
+# Ignore dataset files
+datasets/
+
+*.h5
+models/
+datasets/
