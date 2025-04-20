@@ -15,10 +15,11 @@ The project aims to develop a smart vision-based monitoring system that can impr
 - 🚗 **Driver Monitoring:** Detect drowsy or inattentive drivers to prevent road accidents
 - 🧑‍🏫 **Classroom Surveillance:** Identify cheating or distracted students during exams or lectures
 
-## 📂 Dataset Setup
+## 📂 Files Setup
 
-The dataset is not included in this repository.
+The dataset and learned models are not included in this repository.
 
-Please place the required data folders in a `datasets/` directory located **outside** the project folder:
+Please place the required data folders in a `datasets/` directory located **outside** the project folder,
+and also save the learned models in a `models/` folder **outside** the project folder.
 
 
