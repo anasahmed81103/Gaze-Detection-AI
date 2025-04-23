@@ -1,11 +1,3 @@
-# Ignore large model files
-*.h5
-*.pth
-*.pt
-*.pb
-
-# Ignore model folder
-models/
 
 # Ignore Python bytecode
 __pycache__/
@@ -21,6 +13,5 @@ venv/
 # Ignore dataset files
 datasets/
 
-*.h5
-models/
+
 datasets/
