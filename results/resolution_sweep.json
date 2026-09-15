@@ -1,0 +1,58 @@
+{
+  "splits": [
+    "val",
+    "test"
+  ],
+  "n_images": 81,
+  "rows": [
+    {
+      "max_side": 512,
+      "detection_rate": 0.9629629629629629,
+      "geometric_accuracy": 0.9506172839506173,
+      "cnn_accuracy": 0.8024691358024691,
+      "cascade_accuracy": 0.9629629629629629
+    },
+    {
+      "max_side": 448,
+      "detection_rate": 0.9629629629629629,
+      "geometric_accuracy": 0.9506172839506173,
+      "cnn_accuracy": 0.7777777777777778,
+      "cascade_accuracy": 0.9629629629629629
+    },
+    {
+      "max_side": 384,
+      "detection_rate": 0.9629629629629629,
+      "geometric_accuracy": 0.9506172839506173,
+      "cnn_accuracy": 0.7777777777777778,
+      "cascade_accuracy": 0.9629629629629629
+    },
+    {
+      "max_side": 320,
+      "detection_rate": 0.9629629629629629,
+      "geometric_accuracy": 0.9506172839506173,
+      "cnn_accuracy": 0.7283950617283951,
+      "cascade_accuracy": 0.9629629629629629
+    },
+    {
+      "max_side": 256,
+      "detection_rate": 0.9629629629629629,
+      "geometric_accuracy": 0.9506172839506173,
+      "cnn_accuracy": 0.7283950617283951,
+      "cascade_accuracy": 0.9629629629629629
+    },
+    {
+      "max_side": 192,
+      "detection_rate": 0.9629629629629629,
+      "geometric_accuracy": 0.9506172839506173,
+      "cnn_accuracy": 0.7037037037037037,
+      "cascade_accuracy": 0.9629629629629629
+    },
+    {
+      "max_side": 128,
+      "detection_rate": 0.9629629629629629,
+      "geometric_accuracy": 0.9506172839506173,
+      "cnn_accuracy": 0.6296296296296297,
+      "cascade_accuracy": 0.9753086419753086
+    }
+  ]
+}

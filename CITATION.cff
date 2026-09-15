@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: "Gaze Detection for Online Assessments and Driver Monitoring"
+message: "If you use this software or its findings, please cite it as below."
+type: software
+authors:
+  - family-names: Ahmed
+    given-names: Anas
+  - family-names: Hussain
+    given-names: Ghulam
+  - family-names: Junaid
+    given-names: Ibrahim
+version: 1.0.0
+date-released: "2026-09-15"
+license: MIT
+repository-code: "https://github.com/anasahmed81103/Gaze-Detection-AI"
+keywords:
+  - computer vision
+  - gaze estimation
+  - head pose estimation
+  - facial landmarks
+  - mediapipe
+  - efficientnet
+  - edge inference
+abstract: >-
+  A CPU-only, real-time system that classifies head direction as front, left or right from a
+  single webcam frame, developed for online-assessment integrity and driver-attention
+  monitoring. On a dataset of 400 photographs of three subjects, a two-parameter geometric
+  estimator derived from MediaPipe Face Mesh landmarks reaches 95.06% on a held-out split and
+  94.75% +/- 1.66% under 5-fold cross-validation, outperforming a fine-tuned EfficientNetB0
+  (80.25%) by 15 points while running 13 times faster at 174 FPS on a desktop CPU. The
+  geometric score is invariant to input resolution from 512 px down to 128 px, whereas the
+  CNN loses 17 points over the same range. Under a leave-one-subject-out protocol accuracy
+  falls to 87.49% +/- 10.98%, which the repository reports as the honest operating point;
+  threshold transfer, not landmark detection, is the measured failure mode.

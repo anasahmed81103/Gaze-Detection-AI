@@ -1,0 +1,59 @@
+{
+  "environment": {
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "logical_cores": 12,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.1",
+    "opencv": "4.11.0",
+    "device": "CPU",
+    "tensorflow": "2.19.0",
+    "mediapipe": "0.10.21"
+  },
+  "settings": {
+    "resolution": "640x480",
+    "timed_frames": 400,
+    "warmup_frames": 40
+  },
+  "stages": {
+    "Face Mesh landmark detection": {
+      "median_ms": 5.624350000289269,
+      "mean_ms": 8.183336750371382,
+      "p95_ms": 18.7388850012212,
+      "min_ms": 4.739299998618662,
+      "max_ms": 21.97820000583306,
+      "implied_fps": 177.79832335266627
+    },
+    "Geometric scoring + decision": {
+      "median_ms": 0.10659999679774046,
+      "mean_ms": 0.10883053013985262,
+      "p95_ms": 0.11809999705292284,
+      "min_ms": 0.10410000686533749,
+      "max_ms": 0.22640000679530203,
+      "implied_fps": 9380.863321200366
+    },
+    "EfficientNetB0 inference": {
+      "median_ms": 71.66215000324883,
+      "mean_ms": 72.18513625004562,
+      "p95_ms": 75.49278499791399,
+      "min_ms": 69.27849998464808,
+      "max_ms": 103.56150000006892,
+      "implied_fps": 13.954367821153353
+    },
+    "Full pipeline (geometric)": {
+      "median_ms": 5.939249997027218,
+      "mean_ms": 8.501503750230768,
+      "p95_ms": 19.007959988084618,
+      "min_ms": 4.896200000075623,
+      "max_ms": 27.536100009456277,
+      "implied_fps": 168.37142745305073
+    },
+    "Full pipeline (geometric + CNN every frame)": {
+      "median_ms": 78.53285000601318,
+      "mean_ms": 81.04251849923457,
+      "p95_ms": 92.24207000224851,
+      "min_ms": 74.51589999254793,
+      "max_ms": 193.4590000018943,
+      "implied_fps": 12.733524887017738
+    }
+  }
+}

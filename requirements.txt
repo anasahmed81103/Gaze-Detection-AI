@@ -1,0 +1,13 @@
+# Pinned to the versions this project was verified against on 2026-09-15
+# (Windows 11, Python 3.11.1, CPU-only inference).
+#
+# MediaPipe 0.10.x imports TensorFlow internally, so TensorFlow is required even if you
+# only ever use the geometric estimator.
+
+mediapipe==0.10.21
+tensorflow==2.19.0
+opencv-python==4.11.0.86
+numpy==1.26.4
+scikit-learn==1.6.1
+matplotlib==3.10.9
+Pillow==12.2.0

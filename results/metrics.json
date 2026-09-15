@@ -1,0 +1,337 @@
+{
+  "split": "held_out",
+  "splits_used": [
+    "val",
+    "test"
+  ],
+  "n_images": 81,
+  "class_distribution": {
+    "front": 26,
+    "left": 29,
+    "right": 26
+  },
+  "face_mesh_detection_rate": 0.9629629629629629,
+  "calibration": {
+    "description": "Decision thresholds for the geometric gaze estimator. Scores are signed so that positive means the 'left' class.",
+    "classes": [
+      "front",
+      "left",
+      "right"
+    ],
+    "fitted_on": "train split of data/personal_data_small",
+    "dataset": {
+      "images_total": 400,
+      "train": 319,
+      "val": 40,
+      "test": 41,
+      "face_mesh_detection_rate": 0.98
+    },
+    "yaw": {
+      "thresholds": {
+        "low": -0.235550362518264,
+        "high": 0.24955380223773777
+      },
+      "train_accuracy": 0.964968152866242,
+      "held_out_accuracy": 0.9506172839506173,
+      "cross_validation": {
+        "folds": 5,
+        "seed": 42,
+        "fold_accuracy": [
+          0.925,
+          0.95,
+          0.9375,
+          0.95,
+          0.975
+        ],
+        "mean_accuracy": 0.9475,
+        "std_accuracy": 0.01658312395177698,
+        "out_of_fold_accuracy": 0.9475,
+        "threshold_low_mean": -0.2945669710754318,
+        "threshold_low_std": 0.05526503900234435,
+        "threshold_high_mean": 0.24632717705563284,
+        "threshold_high_std": 0.033459504219132026
+      }
+    },
+    "iris": {
+      "thresholds": {
+        "low": -0.024046832188836676,
+        "high": 0.03398486374008877
+      },
+      "train_accuracy": 0.5796178343949044,
+      "held_out_accuracy": 0.6296296296296297,
+      "cross_validation": {
+        "folds": 5,
+        "seed": 42,
+        "fold_accuracy": [
+          0.45,
+          0.575,
+          0.6375,
+          0.5625,
+          0.55
+        ],
+        "mean_accuracy": 0.5549999999999999,
+        "std_accuracy": 0.060518592184551,
+        "out_of_fold_accuracy": 0.555,
+        "threshold_low_mean": -0.024908017123498903,
+        "threshold_low_std": 0.0023024647328068583,
+        "threshold_high_mean": 0.03367087379054164,
+        "threshold_high_std": 0.010431153525152347
+      }
+    },
+    "ear": {
+      "closed_below": 0.0829998676963525,
+      "open_eye_mean": 0.3373236078941816,
+      "open_eye_std": 0.09967649808185956,
+      "note": "Heuristic. Set to the 1st percentile of the open-eye EAR distribution in data/personal_data_small, which contains no labelled closed-eye images. Not a benchmarked blink classifier."
+    }
+  },
+  "methods": {
+    "Majority-class baseline": {
+      "kind": "baseline",
+      "parameters": 0,
+      "accuracy": 0.35802469135802467,
+      "macro_f1": 0.17575757575757575,
+      "per_class": {
+        "front": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0
+        },
+        "left": {
+          "precision": 0.35802469135802467,
+          "recall": 1.0,
+          "f1-score": 0.5272727272727272
+        },
+        "right": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          26,
+          0
+        ],
+        [
+          0,
+          29,
+          0
+        ],
+        [
+          0,
+          26,
+          0
+        ]
+      ],
+      "n": 81
+    },
+    "Geometric head-yaw (Face Mesh)": {
+      "kind": "geometric",
+      "parameters": 2,
+      "accuracy": 0.9506172839506173,
+      "macro_f1": 0.9509523809523809,
+      "per_class": {
+        "front": {
+          "precision": 0.8666666666666667,
+          "recall": 1.0,
+          "f1-score": 0.9285714285714286
+        },
+        "left": {
+          "precision": 1.0,
+          "recall": 0.9310344827586207,
+          "f1-score": 0.9642857142857143
+        },
+        "right": {
+          "precision": 1.0,
+          "recall": 0.9230769230769231,
+          "f1-score": 0.96
+        }
+      },
+      "confusion_matrix": [
+        [
+          26,
+          0,
+          0
+        ],
+        [
+          2,
+          27,
+          0
+        ],
+        [
+          2,
+          0,
+          24
+        ]
+      ],
+      "n": 81
+    },
+    "Geometric iris offset (Face Mesh)": {
+      "kind": "geometric",
+      "parameters": 2,
+      "accuracy": 0.6296296296296297,
+      "macro_f1": 0.6211685823754789,
+      "per_class": {
+        "front": {
+          "precision": 0.7,
+          "recall": 0.8076923076923077,
+          "f1-score": 0.75
+        },
+        "left": {
+          "precision": 0.5789473684210527,
+          "recall": 0.3793103448275862,
+          "f1-score": 0.4583333333333333
+        },
+        "right": {
+          "precision": 0.59375,
+          "recall": 0.7307692307692307,
+          "f1-score": 0.6551724137931034
+        }
+      },
+      "confusion_matrix": [
+        [
+          21,
+          3,
+          2
+        ],
+        [
+          7,
+          11,
+          11
+        ],
+        [
+          2,
+          5,
+          19
+        ]
+      ],
+      "n": 81
+    },
+    "EfficientNetB0 (LFR pre-train only)": {
+      "kind": "cnn",
+      "parameters": 4053414,
+      "accuracy": 0.5925925925925926,
+      "macro_f1": 0.5494533435036867,
+      "per_class": {
+        "front": {
+          "precision": 0.6046511627906976,
+          "recall": 1.0,
+          "f1-score": 0.7536231884057971
+        },
+        "left": {
+          "precision": 0.8571428571428571,
+          "recall": 0.20689655172413793,
+          "f1-score": 0.3333333333333333
+        },
+        "right": {
+          "precision": 0.5161290322580645,
+          "recall": 0.6153846153846154,
+          "f1-score": 0.5614035087719298
+        }
+      },
+      "confusion_matrix": [
+        [
+          26,
+          0,
+          0
+        ],
+        [
+          8,
+          6,
+          15
+        ],
+        [
+          9,
+          1,
+          16
+        ]
+      ],
+      "n": 81
+    },
+    "EfficientNetB0 (fine-tuned)": {
+      "kind": "cnn",
+      "parameters": 4053414,
+      "accuracy": 0.8024691358024691,
+      "macro_f1": 0.7936507936507936,
+      "per_class": {
+        "front": {
+          "precision": 0.7647058823529411,
+          "recall": 1.0,
+          "f1-score": 0.8666666666666667
+        },
+        "left": {
+          "precision": 0.7741935483870968,
+          "recall": 0.8275862068965517,
+          "f1-score": 0.8
+        },
+        "right": {
+          "precision": 0.9375,
+          "recall": 0.5769230769230769,
+          "f1-score": 0.7142857142857143
+        }
+      },
+      "confusion_matrix": [
+        [
+          26,
+          0,
+          0
+        ],
+        [
+          4,
+          24,
+          1
+        ],
+        [
+          4,
+          7,
+          15
+        ]
+      ],
+      "n": 81
+    },
+    "Cascade (geometric, CNN fallback)": {
+      "kind": "hybrid",
+      "parameters": 4053416,
+      "note": "Geometric verdict whenever Face Mesh finds landmarks, EfficientNetB0 on the remaining frames.",
+      "accuracy": 0.9629629629629629,
+      "macro_f1": 0.9626085958130813,
+      "per_class": {
+        "front": {
+          "precision": 0.9629629629629629,
+          "recall": 1.0,
+          "f1-score": 0.9811320754716981
+        },
+        "left": {
+          "precision": 0.9655172413793104,
+          "recall": 0.9655172413793104,
+          "f1-score": 0.9655172413793104
+        },
+        "right": {
+          "precision": 0.96,
+          "recall": 0.9230769230769231,
+          "f1-score": 0.9411764705882353
+        }
+      },
+      "confusion_matrix": [
+        [
+          26,
+          0,
+          0
+        ],
+        [
+          0,
+          28,
+          1
+        ],
+        [
+          1,
+          1,
+          24
+        ]
+      ],
+      "n": 81
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "protocol": "leave-one-subject-out, geometric head-yaw",
+  "n_images": 400,
+  "folds": [
+    {
+      "held_out_subject": "A",
+      "description": "Galaxy S22, patterned wall",
+      "n_test": 152,
+      "n_train": 248,
+      "thresholds": {
+        "low": -0.1136824541149959,
+        "high": 0.26562461223198697
+      },
+      "accuracy": 0.9210526315789473,
+      "face_mesh_detection_rate": 0.9605263157894737,
+      "confusion_matrix": [
+        [
+          55,
+          0,
+          6
+        ],
+        [
+          6,
+          57,
+          0
+        ],
+        [
+          0,
+          0,
+          28
+        ]
+      ]
+    },
+    {
+      "held_out_subject": "B",
+      "description": "Galaxy S22, cream wall",
+      "n_test": 201,
+      "n_train": 199,
+      "thresholds": {
+        "low": -0.3632192892780131,
+        "high": 0.25821001518036096
+      },
+      "accuracy": 0.9800995024875622,
+      "face_mesh_detection_rate": 0.9900497512437811,
+      "confusion_matrix": [
+        [
+          49,
+          1,
+          0
+        ],
+        [
+          1,
+          63,
+          0
+        ],
+        [
+          2,
+          0,
+          85
+        ]
+      ]
+    },
+    {
+      "held_out_subject": "C",
+      "description": "Google Pixel, plain wall",
+      "n_test": 47,
+      "n_train": 353,
+      "thresholds": {
+        "low": -0.24593935591057983,
+        "high": 0.35989112038154675
+      },
+      "accuracy": 0.723404255319149,
+      "face_mesh_detection_rate": 1.0,
+      "confusion_matrix": [
+        [
+          18,
+          0,
+          0
+        ],
+        [
+          10,
+          5,
+          0
+        ],
+        [
+          3,
+          0,
+          11
+        ]
+      ]
+    }
+  ],
+  "summary": {
+    "mean_accuracy": 0.8748521297952195,
+    "std_accuracy": 0.10976938630150748,
+    "weighted_accuracy": 0.9275,
+    "min_accuracy": 0.723404255319149
+  }
+}

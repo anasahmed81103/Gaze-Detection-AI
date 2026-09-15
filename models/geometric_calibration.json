@@ -1,0 +1,74 @@
+{
+  "description": "Decision thresholds for the geometric gaze estimator. Scores are signed so that positive means the 'left' class.",
+  "classes": [
+    "front",
+    "left",
+    "right"
+  ],
+  "fitted_on": "train split of data/personal_data_small",
+  "dataset": {
+    "images_total": 400,
+    "train": 319,
+    "val": 40,
+    "test": 41,
+    "face_mesh_detection_rate": 0.98
+  },
+  "yaw": {
+    "thresholds": {
+      "low": -0.235550362518264,
+      "high": 0.24955380223773777
+    },
+    "train_accuracy": 0.964968152866242,
+    "held_out_accuracy": 0.9506172839506173,
+    "cross_validation": {
+      "folds": 5,
+      "seed": 42,
+      "fold_accuracy": [
+        0.925,
+        0.95,
+        0.9375,
+        0.95,
+        0.975
+      ],
+      "mean_accuracy": 0.9475,
+      "std_accuracy": 0.01658312395177698,
+      "out_of_fold_accuracy": 0.9475,
+      "threshold_low_mean": -0.2945669710754318,
+      "threshold_low_std": 0.05526503900234435,
+      "threshold_high_mean": 0.24632717705563284,
+      "threshold_high_std": 0.033459504219132026
+    }
+  },
+  "iris": {
+    "thresholds": {
+      "low": -0.024046832188836676,
+      "high": 0.03398486374008877
+    },
+    "train_accuracy": 0.5796178343949044,
+    "held_out_accuracy": 0.6296296296296297,
+    "cross_validation": {
+      "folds": 5,
+      "seed": 42,
+      "fold_accuracy": [
+        0.45,
+        0.575,
+        0.6375,
+        0.5625,
+        0.55
+      ],
+      "mean_accuracy": 0.5549999999999999,
+      "std_accuracy": 0.060518592184551,
+      "out_of_fold_accuracy": 0.555,
+      "threshold_low_mean": -0.024908017123498903,
+      "threshold_low_std": 0.0023024647328068583,
+      "threshold_high_mean": 0.03367087379054164,
+      "threshold_high_std": 0.010431153525152347
+    }
+  },
+  "ear": {
+    "closed_below": 0.0829998676963525,
+    "open_eye_mean": 0.3373236078941816,
+    "open_eye_std": 0.09967649808185956,
+    "note": "Heuristic. Set to the 1st percentile of the open-eye EAR distribution in data/personal_data_small, which contains no labelled closed-eye images. Not a benchmarked blink classifier."
+  }
+}

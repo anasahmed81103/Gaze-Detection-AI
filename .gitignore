@@ -1,17 +1,26 @@
-
-# Ignore Python bytecode
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
 
-# Ignore virtual environment folder (if any)
+# Virtual environments
 .env/
+.venv/
 venv/
 
-# Ignore system files
+# Generated artefacts. results/*.json and results/comparison.md are committed on purpose,
+# because the README quotes them; the feature cache and demo outputs are not.
+results/cache/
+results/predictions/
+results/*.mp4
+results/*.avi
+
+# Large external datasets are never committed. See data/README.md.
+datasets/
+data/**/originals/
+
+# OS noise
 .DS_Store
-
-# Ignore dataset files
-datasets/
-
-
-datasets/
+Thumbs.db
+desktop.ini
