@@ -2,7 +2,7 @@
 
 ## `personal_data_small/` — committed
 
-400 labelled photographs captured by the authors, the only dataset redistributed here.
+400 labelled photographs captured by the author, the only dataset redistributed here.
 
 ```
 personal_data_small/

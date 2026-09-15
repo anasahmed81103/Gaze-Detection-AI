@@ -5,10 +5,6 @@ type: software
 authors:
   - family-names: Ahmed
     given-names: Anas
-  - family-names: Hussain
-    given-names: Ghulam
-  - family-names: Junaid
-    given-names: Ibrahim
 version: 1.0.0
 date-released: "2026-09-15"
 license: MIT

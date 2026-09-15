@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2025 Anas Ahmed, Ghulam Hussain, Ibrahim Junaid
+Copyright (c) 2025 Anas Ahmed
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,7 @@ SOFTWARE.
 
 ---
 
-The photographs in data/personal_data_small were captured by the authors, who consent to
+The photographs in data/personal_data_small were captured by the author, who consents to
 their use for research and educational purposes. They depict identifiable people; please
 do not redistribute them separately from this repository or use them to train commercial
 biometric systems.

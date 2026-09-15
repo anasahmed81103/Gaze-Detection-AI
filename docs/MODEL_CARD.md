@@ -15,7 +15,7 @@ the scripts in [`../scripts/`](../scripts); sources are named for each claim.
 | Auxiliary outputs | Iris horizontal offset; eye-aspect-ratio blink signal |
 | Artefacts | `models/geometric_calibration.json`, `models/head_dir_effnetb0_ft.keras`, `models/head_dir_effnetb0_lfr.keras` |
 | Licence | MIT (code and weights) |
-| Owners | Anas Ahmed, Ghulam Hussain, Ibrahim Junaid |
+| Owner | Anas Ahmed |
 
 Label semantics are **image-space**: `left` means the face is turned towards the left edge of
 the frame. For a non-mirrored capture that is the subject's own right.

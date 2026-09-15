@@ -328,16 +328,11 @@ protocol.
 - [`docs/DLP_Report_Final.pdf`](docs/DLP_Report_Final.pdf) — the original course report, as submitted
 - [`notebooks/README.md`](notebooks/README.md) — what each original notebook did and what came of it
 
-## Authors
+## Author
 
-Course project for Deep Learning for Perception, instructor Dr. Farrukh Hasan Syed.
-
-- Anas Ahmed (22K-4154)
-- Ghulam Hussain (22K-4280)
-- Ibrahim Junaid (22K-4563)
-
-The reproducibility work, the geometric estimator and the evaluation protocols in this
-repository were added after submission.
+Anas Ahmed (22K-4154). Course project for Deep Learning for Perception, instructor
+Dr. Farrukh Hasan Syed. The reproducibility work, the geometric estimator and the
+evaluation protocols in this repository were added after submission.
 
 ## Acknowledgements
 
